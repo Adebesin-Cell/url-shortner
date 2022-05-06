@@ -1,0 +1,19 @@
+.nav {
+  margin-left: var(--span-l);
+  margin-right: auto;
+  align-self: center;
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: var(--span-m);
+  }
+
+  &__link {
+    font-family: var(--Poppins);
+    font-size: var(--size-m);
+    font-weight: var(--weight-md);
+    line-height: 25px;
+  }
+}
