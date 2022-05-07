@@ -6,7 +6,7 @@ const Nav = function () {
       <ul className={styles["nav__list"]}>
         <li className={styles["nav__item"]}>
           <a
-            href='/features'
+            href='/'
             className={styles["nav__link"]}
             name='Features'
             aria-label='Features'
@@ -16,7 +16,7 @@ const Nav = function () {
         </li>
         <li className={styles["nav__item"]}>
           <a
-            href='/pricing'
+            href='/'
             className={styles["nav__link"]}
             name='Pricing'
             aria-label='Pricing'
@@ -26,7 +26,7 @@ const Nav = function () {
         </li>
         <li className={styles["nav__item"]}>
           <a
-            href='/resources'
+            href='/'
             className={styles["nav__link"]}
             name='Resources'
             aria-label='Resources'

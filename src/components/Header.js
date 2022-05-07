@@ -1,4 +1,5 @@
 import Nav from "./Nav";
+import Button from "./UI/Button";
 import styles from "./Header.module.scss";
 import { ReactComponent as Logo } from "../assets/svgs/logo.svg";
 
@@ -12,6 +13,12 @@ const Header = function () {
           </a>
         </div>
         <Nav></Nav>
+        <div className={styles["header__extras"]}>
+          <a href='/' className={styles["header__link"]}>
+            Login
+          </a>
+          <Button className='btn btn--header'>Sign Up</Button>
+        </div>
       </div>
     </header>
   );

@@ -1,15 +1,30 @@
 .header {
-  padding-top: var(--span-l);
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-top: var(--span-m);
+  padding-left: 5%;
+  padding-right: 5%;
 
   @media only screen and (min-width: 1960px) {
     padding-left: 15%;
     padding-right: 15%;
   }
 
+  @media only screen and (max-width: 1440px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   &__wrapper {
     display: flex;
+  }
+
+  &__link {
+    text-transform: capitalize;
+    font-family: var(--Poppins);
+    font-size: var(--size-m);
+    font-weight: var(--weight-xlg);
+    line-height: 25px;
+    text-decoration: none;
+    color: var(--grayish-violet);
   }
 }
 

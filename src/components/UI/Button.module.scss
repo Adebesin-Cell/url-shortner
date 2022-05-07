@@ -1,0 +1,19 @@
+.btn {
+  font-family: var(--Poppins);
+  border: none;
+  outline: none;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--header {
+    padding: var(--span-xs) var(--span-m);
+    background: var(--cyan);
+    border-radius: 20px;
+    font-size: var(--size-m);
+    font-weight: var(--weight-xlg);
+    line-height: 25px;
+    color: var(--white);
+    text-align: center;
+  }
+}
