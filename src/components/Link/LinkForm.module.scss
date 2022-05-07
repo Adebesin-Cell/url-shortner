@@ -1,0 +1,38 @@
+.form {
+  margin-top: -90px;
+  padding: var(--span-2xl);
+  background: var(--dark-violet) url(../../assets/svgs/bg-shorten-desktop.svg);
+  background-size: cover;
+  border-radius: 10px;
+  display: grid;
+  gap: var(--span-s);
+  grid-template-columns: 3fr 1fr;
+
+  &__group {
+    max-height: 100%;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 0 var(--span-m);
+    border-radius: 10px;
+    background: var(--white);
+    font-family: var(--Poppins);
+    font-size: var(--size-m);
+    font-weight: var(--weight-md);
+    line-height: 27px;
+    color: var(--grayish-violet);
+
+    &::-webkit-input-placeholder {
+      font-family: var(--Poppins);
+      font-size: var(--size-m);
+      font-weight: var(--weight-md);
+      line-height: 27px;
+      color: var(--grayish-violet);
+    }
+  }
+}
