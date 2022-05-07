@@ -26,6 +26,12 @@
     text-decoration: none;
     color: var(--grayish-violet);
   }
+
+  &__extras {
+    display: flex;
+    align-items: center;
+    gap: var(--span-m);
+  }
 }
 
 .logo {
