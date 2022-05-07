@@ -1,0 +1,15 @@
+.section-about {
+  padding-left: 10%;
+  padding-right: 10%;
+  background: var(--gray);
+
+  @media only screen and (min-width: 1960px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media only screen and (max-width: 1440px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
