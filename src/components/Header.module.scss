@@ -1,16 +1,16 @@
 .header {
   padding-top: var(--span-m);
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 
   @media only screen and (min-width: 1960px) {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   @media only screen and (max-width: 1440px) {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   &__wrapper {
