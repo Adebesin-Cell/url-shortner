@@ -16,3 +16,37 @@
     padding-right: 10%;
   }
 }
+
+.about {
+  padding-top: calc(var(--span-2xl) * 2);
+  padding-bottom: calc(var(--span-2xl) * 2);
+
+  &__header {
+    text-transform: capitalize;
+    font-family: var(--Poppins);
+    font-size: calc(var(--size-xl) + 4px);
+    font-weight: var(--weight-xlg);
+    line-height: 44px;
+    color: var(--very-dark-blue);
+    text-align: center;
+  }
+
+  &__paragraph {
+    font-family: var(--Poppins);
+    font-size: calc(var(--size-m) + 2px);
+    font-weight: var(--weight-md);
+    line-height: 27px;
+    color: var(--grayish-violet);
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto;
+    padding-top: var(--span-xs);
+  }
+
+  &__wrapper {
+    padding-top: calc(1.5 * var(--span-2xl));
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--span-l);
+  }
+}

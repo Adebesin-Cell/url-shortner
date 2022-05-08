@@ -6,7 +6,7 @@
   border-radius: 10px;
   display: grid;
   gap: var(--span-s);
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 4fr 1fr;
 
   &__group {
     max-height: 100%;
@@ -26,6 +26,17 @@
     font-weight: var(--weight-md);
     line-height: 27px;
     color: var(--grayish-violet);
+    border: 1px solid transparent;
+    transition: all 300ms;
+
+    &--error {
+      border: 2px solid var(--red);
+      color: var(--red);
+
+      &::-webkit-input-placeholder {
+        color: var(--red) !important;
+      }
+    }
 
     &::-webkit-input-placeholder {
       font-family: var(--Poppins);

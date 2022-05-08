@@ -1,13 +1,15 @@
 import Button from "../UI/Button";
 import styles from "./LinkForm.module.scss";
 
+// ${styles["form__input--error"]}
+
 const LinkForm = function (props) {
   return (
     <form action='/' className={styles.form}>
       <div className={styles["form__group"]}>
         <input
           type='text'
-          className={styles["form__input"]}
+          className={`${styles["form__input"]}`}
           placeholder='Shorten a link here...'
           id='link_Input'
           name='link'

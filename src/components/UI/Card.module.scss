@@ -1,0 +1,57 @@
+.card {
+  background: var(--white);
+  border-radius: 10px;
+
+  @mixin __card__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--1 {
+    @include __card__inner();
+  }
+
+  &--2 {
+    @include __card__inner();
+    margin-top: var(--span-2xl);
+  }
+
+  &--3 {
+    @include __card__inner();
+    margin-top: calc(2 * var(--span-2xl));
+  }
+
+  &__body {
+    padding: var(--span-m);
+  }
+
+  &__image-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--dark-violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(-1 * (var(--span-2xl) + var(--span-s)));
+  }
+
+  &__heading {
+    padding-top: var(--span-m);
+    font-family: var(--Poppins);
+    font-size: calc(var(--size-m) + 4px);
+    font-weight: var(--weight-xlg);
+    line-height: 27px;
+    color: var(--very-dark-blue);
+  }
+
+  &__paragraph {
+    padding-top: var(--span-s);
+    font-family: var(--Poppins);
+    font-size: calc(var(--size-m));
+    font-weight: var(--weight-md);
+    line-height: 25px;
+    color: var(--grayish-violet);
+    margin-bottom: var(--span-s);
+  }
+}
