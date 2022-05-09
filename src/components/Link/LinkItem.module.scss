@@ -1,0 +1,31 @@
+.about {
+  &__item {
+    background: var(--white);
+    border-radius: 8px;
+    padding: var(--span-xs) var(--span-m);
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: var(--size-m);
+    font-weight: var(--weight-md);
+    line-height: 25px;
+    text-align: left;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+    &--original {
+      color: var(--very-dark-blue);
+    }
+
+    &--shortened {
+      color: var(--cyan);
+    }
+  }
+}

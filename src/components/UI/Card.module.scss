@@ -2,6 +2,10 @@
   background: var(--white);
   border-radius: 10px;
 
+  &__box {
+    width: 100%;
+  }
+
   @mixin __card__inner {
     display: flex;
     flex-direction: column;

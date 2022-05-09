@@ -1,0 +1,9 @@
+.about {
+  &__list {
+    margin-top: var(--span-m);
+    display: grid;
+    gap: var(--span-s);
+    grid-template-columns: 1fr;
+    list-style-type: none;
+  }
+}

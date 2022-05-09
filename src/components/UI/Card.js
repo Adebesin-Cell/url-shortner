@@ -4,7 +4,7 @@ const Card = function (props) {
   const cardId = `card--${props.id}`;
 
   return (
-    <div className=''>
+    <div className={styles["card__box"]}>
       <div className={`${styles.card} ${styles[cardId]}`}>
         <div className={styles["card__body"]}>
           <div className={styles["card__image-box"]}>

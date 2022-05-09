@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import LinkForm from "./Link/LinkForm";
+import LinkList from "./Link/LinkList";
 import Card from "./UI/Card";
 import styles from "./About.module.scss";
 import icon from "../assets/svgs/icon-brand-recognition.svg";
@@ -32,9 +34,25 @@ const aboutList = [
 ];
 
 const About = function () {
+  const links = [
+    {
+      id: 1,
+      originalLink: "https://github.com/Adebesin-Cell",
+      shortenedLink: "https://rel.ink/gxOXp9",
+    },
+
+    {
+      id: 2,
+      originalLink: "https://www.youtube.com/thezuriteam",
+      shortenedLink: "https://rel.ink/gxOXp9",
+    },
+  ];
   return (
     <section className={styles["section-about"]}>
-      <LinkForm></LinkForm>
+      <Fragment>
+        <LinkForm></LinkForm>
+        <LinkList links={links}></LinkList>
+      </Fragment>
       <div className={styles.about}>
         <h1 className={styles["about__header"]}>Advanced Statistics</h1>
         <p className={styles["about__paragraph"]}>
