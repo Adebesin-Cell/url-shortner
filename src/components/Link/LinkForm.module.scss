@@ -4,9 +4,13 @@
   background: var(--dark-violet) url(../../assets/svgs/bg-shorten-desktop.svg);
   background-size: cover;
   border-radius: 10px;
-  display: grid;
-  gap: var(--span-s);
-  grid-template-columns: 4fr 1fr;
+
+  &__wrapper {
+    display: grid;
+    gap: var(--span-s);
+    grid-template-columns: 4fr 1fr;
+    padding-bottom: var(--span-xs);
+  }
 
   &__group {
     max-height: 100%;
@@ -46,4 +50,12 @@
       color: var(--grayish-violet);
     }
   }
+}
+
+.error {
+  font-family: var(--Poppins);
+  font-size: var(--size-m);
+  font-weight: var(--weight-md);
+  line-height: 23px;
+  color: var(--red);
 }

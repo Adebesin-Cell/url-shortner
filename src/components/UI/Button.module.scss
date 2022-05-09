@@ -52,4 +52,18 @@
     width: 100%;
     height: 100%;
   }
+
+  &--copy {
+    background: var(--cyan);
+    padding: var(--span-xs) var(--span-m);
+    border-radius: 10px;
+    font-size: var(--size-m);
+    font-weight: var(--weight-xlg);
+    line-height: 25px;
+    color: var(--white);
+  }
+
+  &--copied {
+    background: var(--dark-violet);
+  }
 }

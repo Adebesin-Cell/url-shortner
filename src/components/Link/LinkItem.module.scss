@@ -9,6 +9,13 @@
     align-items: center;
   }
 
+  &__extras {
+    margin-left: auto;
+    display: flex;
+    gap: var(--span-m);
+    align-items: center;
+  }
+
   &__link {
     font-size: var(--size-m);
     font-weight: var(--weight-md);
