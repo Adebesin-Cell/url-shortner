@@ -8,18 +8,14 @@ import styles from "./LinkForm.module.scss";
 const LinkForm = function (props) {
   const [hasError, setHasError] = useState(false);
   const inputRef = useRef("");
-  let errorContent;
 
   const submitFormHandler = async function (e) {
     e.preventDefault();
 
     if (inputRef.current.value.trim() === "") {
       setHasError(true);
-      errorContent = "Please add a link";
       return;
     }
-
-    console.log(errorContent);
 
     console.log(inputRef.current.value);
 
@@ -29,11 +25,20 @@ const LinkForm = function (props) {
         `https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`
       );
 
-      console.log(response);
+      const template = response.data.result;
+
+      console.log(template);
+
+      const data = {
+        id: template.code,
+        originalLink: template.original_link,
+        shortenedLink: template.short_link,
+      };
+
+      props.onAddData(data);
     } catch (error) {
       console.log(error);
       setHasError(true);
-      errorContent = error.message;
     }
 
     inputRef.current.value = "";

@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import LinkForm from "./Link/LinkForm";
 import LinkList from "./Link/LinkList";
 import Card from "./UI/Card";
@@ -34,23 +34,25 @@ const aboutList = [
 ];
 
 const About = function () {
-  const links = [
-    {
-      id: 1,
-      originalLink: "https://github.com/Adebesin-Cell",
-      shortenedLink: "https://rel.ink/gxOXp9",
-    },
+  const [links, setMylink] = useState(() => {
 
-    {
-      id: 2,
-      originalLink: "https://www.youtube.com/thezuriteam",
-      shortenedLink: "https://rel.ink/gxOXp9",
-    },
-  ];
+    const saved = localStorage.getItem("myLinks");
+    const initialValue = JSON.parse(saved);
+    return initialValue || [];
+  });
+
+  const addDataHandler = function (data) {
+    setMylink((prevLink) => [...prevLink, data]);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("myLinks", JSON.stringify(links));
+  }, [links]);
+
   return (
     <section className={styles["section-about"]}>
       <Fragment>
-        <LinkForm></LinkForm>
+        <LinkForm onAddData={addDataHandler}></LinkForm>
         <LinkList links={links}></LinkList>
       </Fragment>
       <div className={styles.about}>

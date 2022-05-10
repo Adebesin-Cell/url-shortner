@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const LinkItem = function (props) {
   const [isCopied, setIsCopied] = useState(false);
-  console.log(props);
 
   const copyLinkHandler = function (copy) {
     setIsCopied(true);

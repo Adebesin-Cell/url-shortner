@@ -2,12 +2,11 @@ import LinkItem from "./LinkItem";
 import styles from "./LinkList.module.scss";
 
 const LinkList = function (props) {
-  console.log(props.links);
   return (
     <ul className={styles["about__list"]}>
-      {props.links.map((link) => (
+      {props.links.map((link, i) => (
         <LinkItem
-          key={link.id}
+          key={`${link.id}__${i}`}
           id={link.id}
           originalLink={link.originalLink}
           shortenedLink={link.shortenedLink}
