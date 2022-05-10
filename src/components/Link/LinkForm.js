@@ -7,6 +7,7 @@ import styles from "./LinkForm.module.scss";
 
 const LinkForm = function (props) {
   const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const inputRef = useRef("");
 
   const submitFormHandler = async function (e) {
@@ -14,10 +15,9 @@ const LinkForm = function (props) {
 
     if (inputRef.current.value.trim() === "") {
       setHasError(true);
+      setErrorMessage("Please add a link");
       return;
     }
-
-    console.log(inputRef.current.value);
 
     try {
       setHasError(false);
@@ -33,12 +33,15 @@ const LinkForm = function (props) {
         id: template.code,
         originalLink: template.original_link,
         shortenedLink: template.short_link,
+        fullShortLink: template.full_short_link,
       };
 
       props.onAddData(data);
     } catch (error) {
       console.log(error);
       setHasError(true);
+      setErrorMessage(error.message);
+      throw new Error(error.message);
     }
 
     inputRef.current.value = "";
@@ -63,7 +66,7 @@ const LinkForm = function (props) {
           <Button className='btn btn--submit'>Shorten It!</Button>
         </div>
       </div>
-      {hasError && <p className={styles.error}>Please add a link</p>}
+      {hasError && <p className={styles.error}>{errorMessage}</p>}
     </form>
   );
 };

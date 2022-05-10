@@ -12,7 +12,10 @@ const Footer = function () {
         <div
           className={`${styles["footer__group"]} ${styles["footer__group--lg"]}`}
         >
-          <a href='/' className={styles["footer__link"]}>
+          <a
+            href='/'
+            className={`${styles["footer__link"]} ${styles["footer__link--flex"]}`}
+          >
             <Logo />
           </a>
         </div>

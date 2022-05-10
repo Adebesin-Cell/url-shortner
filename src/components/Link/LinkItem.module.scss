@@ -21,11 +21,6 @@
     font-weight: var(--weight-md);
     line-height: 25px;
     text-align: left;
-    line-clamp: 1;
-    -webkit-line-clamp: 1;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
 
     &--original {
       color: var(--very-dark-blue);

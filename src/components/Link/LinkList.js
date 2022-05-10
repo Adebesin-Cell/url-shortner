@@ -10,6 +10,7 @@ const LinkList = function (props) {
           id={link.id}
           originalLink={link.originalLink}
           shortenedLink={link.shortenedLink}
+          fullShortLink={link.fullShortLink}
         />
       ))}
     </ul>

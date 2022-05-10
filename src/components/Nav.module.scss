@@ -3,6 +3,10 @@
   margin-right: auto;
   align-self: center;
 
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     list-style-type: none;
