@@ -1,13 +1,9 @@
 import styles from "./LinkItem.module.scss";
 import Button from "../UI/Button";
-import { useState } from "react";
+import useCopyClipboard from "react-use-clipboard";
 
 const LinkItem = function (props) {
-  const [isCopied, setIsCopied] = useState(false);
-
-  const copyLinkHandler = function (copy) {
-    setIsCopied(true);
-  };
+  const [isCopied, setCopied] = useCopyClipboard(props.shortenedLink);
 
   return (
     <li className={styles["about__item"]}>
@@ -24,7 +20,7 @@ const LinkItem = function (props) {
         </p>
         <Button
           className={`btn btn--copy ${isCopied ? "btn--copied" : ""}`}
-          onClick={copyLinkHandler}
+          onClick={setCopied}
         >
           {isCopied ? "Copied!" : " Copy"}
         </Button>
