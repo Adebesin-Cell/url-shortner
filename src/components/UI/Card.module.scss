@@ -23,6 +23,10 @@
   &--3 {
     @include __card__inner();
     margin-top: calc(2 * var(--span-2xl));
+
+    @media only screen and (max-width: 600px) {
+      margin-top: var(--span-2xl);
+    }
   }
 
   &__body {
@@ -38,6 +42,11 @@
     justify-content: center;
     align-items: center;
     margin-top: calc(-1 * (var(--span-2xl) + var(--span-s)));
+
+    @media only screen and (max-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__heading {
@@ -47,6 +56,10 @@
     font-weight: var(--weight-xlg);
     line-height: 27px;
     color: var(--very-dark-blue);
+
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 
   &__paragraph {
@@ -57,5 +70,15 @@
     line-height: 25px;
     color: var(--grayish-violet);
     margin-bottom: var(--span-s);
+
+    @media only screen and (max-width: 1024px) {
+      font-size: var(--size-s);
+      line-height: 23px;
+      padding-top: var(--span-xs);
+    }
+
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 }

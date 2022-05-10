@@ -7,6 +7,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: initial;
+      height: initial;
+      padding: var(--span-s);
+    }
   }
 
   &__extras {
@@ -14,6 +21,13 @@
     display: flex;
     gap: var(--span-m);
     align-items: center;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: initial;
+      margin-left: 0;
+      gap: 0;
+    }
   }
 
   &__link {
@@ -24,10 +38,22 @@
 
     &--original {
       color: var(--very-dark-blue);
+      @media only screen and (max-width: 600px) {
+        padding-bottom: var(--span-xs);
+        border-bottom: 1px solid var(--gray);
+        margin: 0 -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
 
     &--shortened {
       color: var(--cyan);
+
+      @media only screen and (max-width: 600px) {
+        padding-top: var(--span-s);
+        padding-bottom: var(--span-s);
+      }
     }
   }
 }

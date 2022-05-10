@@ -11,7 +11,7 @@ const LinkItem = function (props) {
       <p
         className={`${styles["about__link"]} ${styles["about__link--original"]}`}
       >
-        {`${props.originalLink.substr(0, 20)}...`}
+        {`${props.originalLink.substr(0, 30)}...`}
       </p>
       <div className={styles["about__extras"]}>
         <p

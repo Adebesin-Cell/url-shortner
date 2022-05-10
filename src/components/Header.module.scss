@@ -46,6 +46,10 @@
     display: flex;
     align-items: center;
     gap: var(--span-m);
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 

@@ -61,6 +61,10 @@
     font-weight: var(--weight-xlg);
     line-height: 25px;
     color: var(--white);
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   &--copied {

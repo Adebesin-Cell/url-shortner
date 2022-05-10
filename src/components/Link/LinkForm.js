@@ -2,12 +2,14 @@ import { useRef, useState } from "react";
 import axios from "axios";
 import Button from "../UI/Button";
 import styles from "./LinkForm.module.scss";
+import { ReactComponent as Loader } from "../../assets/svgs/icon-refresh-cw.svg";
 
 // ${styles["form__input--error"]}
 
 const LinkForm = function (props) {
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef("");
 
   const submitFormHandler = async function (e) {
@@ -19,8 +21,11 @@ const LinkForm = function (props) {
       return;
     }
 
+    setIsLoading(true);
+
     try {
       setHasError(false);
+
       const response = await axios.post(
         `https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`
       );
@@ -41,10 +46,12 @@ const LinkForm = function (props) {
       console.log(error);
       setHasError(true);
       setErrorMessage(error.message);
+      setIsLoading(false);
       throw new Error(error.message);
     }
 
     inputRef.current.value = "";
+    setIsLoading(false);
   };
 
   return (
@@ -61,6 +68,11 @@ const LinkForm = function (props) {
             id='link_Input'
             name='link'
           />
+          {isLoading && (
+            <div className={styles["loader"]}>
+              <Loader />
+            </div>
+          )}
         </div>
         <div className={styles["form__group"]}>
           <Button className='btn btn--submit'>Shorten It!</Button>

@@ -35,6 +35,11 @@
   padding-top: calc(var(--span-2xl) * 2);
   padding-bottom: calc(var(--span-2xl) * 2);
 
+  @media only screen and (max-width: 600px) {
+    padding-top: calc(var(--span-2xl));
+    padding-bottom: calc(var(--span-2xl));
+  }
+
   &__header {
     text-transform: capitalize;
     font-family: var(--Poppins);
@@ -43,6 +48,11 @@
     line-height: 44px;
     color: var(--very-dark-blue);
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+      font-size: var(--size-l);
+      line-height: 32px;
+    }
   }
 
   &__paragraph {
@@ -65,6 +75,10 @@
 
     @media only screen and (max-width: 990px) {
       gap: var(--span-s);
+    }
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
   }
 }
