@@ -35,7 +35,6 @@ const aboutList = [
 
 const About = function () {
   const [links, setMylink] = useState(() => {
-
     const saved = localStorage.getItem("myLinks");
     const initialValue = JSON.parse(saved);
     return initialValue || [];
@@ -71,6 +70,7 @@ const About = function () {
               details={item.details}
             />
           ))}
+          <hr className={styles["about__underline"]} />
         </div>
       </div>
     </section>

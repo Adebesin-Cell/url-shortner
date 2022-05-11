@@ -1,6 +1,8 @@
 .card {
   background: var(--white);
   border-radius: 10px;
+  position: relative;
+  z-index: 2;
 
   &__box {
     width: 100%;
@@ -17,14 +19,14 @@
 
   &--2 {
     @include __card__inner();
-    margin-top: var(--span-2xl);
+    margin-top: var(--span-xl);
   }
 
   &--3 {
     @include __card__inner();
-    margin-top: calc(2 * var(--span-2xl));
+    margin-top: calc(2 * var(--span-xl));
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
       margin-top: var(--span-2xl);
     }
   }
